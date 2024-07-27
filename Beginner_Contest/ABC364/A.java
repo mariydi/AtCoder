@@ -1,3 +1,5 @@
+package Beginner_Contest.ABC364;
+
 import java.util.Scanner;
 
 public class A {
