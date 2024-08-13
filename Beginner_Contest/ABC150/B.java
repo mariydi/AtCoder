@@ -1,27 +1,21 @@
-import java.util.Scanner;
-import java.util.Arrays;
+package Beginner_Contest.ABC150;
 
-public class C {
+import java.util.Scanner;
+
+public class B {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int N = InputBasicLine.IntValue(scn);
-        int K = InputBasicLine.IntValue(scn);
         String S = InputBasicLine.StringValue(scn);
-
-        // N!/p!q!r!
-        String partS[] = S.split("");
-
-        for(String s: partS){
-
+        String abc = "ABC";
+        int ans =0;
+        for(int i=0;i<N;i++){
+            if(i+3>N){break;}
+            if(abc.equals(S.substring(i,i+3))){
+                ans++;
+            }
         }
-    }
-
-    static boolean isPalindrome (String s) {
-        int n = s.length();
-        for (int i=0; i<n/2; i++) {
-            if (s.charAt(i)!=s.charAt(n-i-1)) {return false;}
-        }
-        return true;
+        System.out.println(ans);
     }
 }
 
